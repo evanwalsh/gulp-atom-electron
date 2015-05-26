@@ -9,7 +9,7 @@ var download = require('./download');
 
 function moveApp(platform, opts) {
 	var appPath = platform.getAppPath(opts);
-	
+
 	return rename(function (path) {
 		path.dirname = appPath + (path.dirname === '.' ? '' : '/' + path.dirname);
 	});
@@ -54,7 +54,7 @@ function _electron(opts) {
 		// We need to extract the application's name and version
 		// in order to feed it to the various platforms build
 		// process.
-		opts.productName = json.name;
+		opts.productName = json.productName || json.name;
 		opts.productVersion = json.version;
 
 		var platform = require('./' + opts.platform);

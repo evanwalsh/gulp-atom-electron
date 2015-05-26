@@ -1,5 +1,6 @@
 {
 	"name": "FakeTemplateApp",
+	"productName": "Fake Template App",
 	"version": "0.0.1",
 	"main": "main.js"
 }
